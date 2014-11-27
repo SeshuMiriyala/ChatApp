@@ -1,0 +1,10 @@
+﻿<div style="margin-left: 50px; width:100%;" ng-controller="homeCtrl">
+    <form>
+        <textarea aria-autocomplete="both" aria-multiline="True" autofocus="autofocus" rows="3" spellcheck="true" tabindex="0" wrap="soft" style="width: 100%" ng-model="newPost.message"></textarea>
+        <input type="submit" value="Post" class="btn btn-primary btn-success" ng-click="postMsg()"/>
+    </form>
+    <div ng-repeat="post in posts" style="width:100%;white-space:nowrap;" id="divPost">
+        <label id="lblUser" style="font-weight: bold;">{{post.username}}:</label>
+        <label id="lblMsg">{{post.message}}</label>
+    </div>
+</div>
